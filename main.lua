@@ -136,7 +136,7 @@ function Radar:design()
     end
 
     dxDrawImage( self.x, self.y, self.width, self.height, "assets/circle_vignette.png", 0,0,0, tocolor(255,255,255,230) )
-    dxDrawImage((self.x) + x*92, (self.y) + y*91, x*20, y*20, "assets/blips/65.png", camera_rot-player_rot,0,0, tocolor(255,255,255,230) )
+    dxDrawImage((self.x) + x*92, (self.y) + y*91, x*20, y*20, "assets/blips/0.png", camera_rot-player_rot,0,0, tocolor(255,255,255,230) )
 end
 
 
