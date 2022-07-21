@@ -5,7 +5,6 @@ Radar.instances = {}
 local screenW,screenH = guiGetScreenSize()
 local devScreenX, devScreenY = 1600,900
 local x,y = (screenW/devScreenX), (screenH/devScreenY)
-local bip = createBlip(2344.30640, -1582.76880, 23.14828, 2, 0, 0, 0, 255)
 
 function Radar.new(posx, posy, width, height)
     local self = setmetatable({}, Radar)
@@ -28,7 +27,7 @@ function Radar.new(posx, posy, width, height)
     self.world= DxTexture("assets/world.png", "dxt5")
 
     for i=0, 2 do   
-        self.blips[i] = DxTexture("assets/blips/"..tostring(i)..".png")
+        self.blips[i] = DxTexture("assets/blips/"..tostring(i)..".png", "dxt3")
     end
 
     if self.hudMask and self.circleMask and self.world then 
@@ -106,7 +105,7 @@ function Radar:design()
                 local blipIcon = b:getIcon()
                 local blipX, blipY = getMathInBoundRadar(blipPos.x, blipPos.y, self.x, self.y, self.width, self.height, x*worldSize)
 
-                if getDistanceBetweenPoints2D(me.x, me.y, blipPos.x, blipPos.y) < self.width + 75 then
+                if getDistanceBetweenPoints2D(me.x, me.y, blipPos.x, blipPos.y) < self.width + 60 then
                     dxDrawImage(blipX-x*self.blipSize/2, blipY-y*self.blipSize/2, x*self.blipSize, y*self.blipSize, self.blips[blipIcon], 0,0,0,tocolor(255,255,255,255))
                 end       
             end
