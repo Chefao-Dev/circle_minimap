@@ -45,7 +45,7 @@ function Radar.new(posx, posy, width, height)
     self.blips = {}
 
     -- Shaders config
-    self.hudMask = DxShader("fx/hud_mask.fx")
+    self.hudMask = DxShader("assets/fx/hud_mask.fx")
     self.circleMask = DxTexture("assets/circle_mask.png", "dxt5")    
     self.world= DxTexture("assets/world.png", "dxt5")
 
