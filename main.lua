@@ -10,6 +10,8 @@ function Radar.new(posx, posy, width, height)
     local self = setmetatable({}, Radar)
     local me = localPlayer:getPosition()
 
+    showPlayerHudComponent("radar", false)
+
     -- Setting mini map proportions
     self.x = posx
     self.y = posy
