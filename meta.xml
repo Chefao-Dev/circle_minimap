@@ -1,0 +1,19 @@
+<meta>
+    <oop>true</oop>
+    <info author="flashii" version="1.0.0" name="circle_minimap" description="A Circle Radar System" type="script" />
+    
+    <script src="main.lua" type="client" cache="false" />
+    <script src="render.lua" type="client" cache="false" />
+
+    <!-- Assets -->
+    <file src="fx/hud_mask.fx" />
+    <file src="fx/tex_matrix.fx" />
+
+    <file src="assets/circle_mask.png" />
+    <file src="assets/circle_vignette.png" />
+    <file src="assets/world.png" />
+
+    <file src="assets/blips/0.png" />
+    <file src="assets/blips/1.png" />
+    <file src="assets/blips/2.png" />
+</meta>
